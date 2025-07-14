@@ -48,7 +48,7 @@ jobs:
           outputPath: ./reports/lighthouse-report.html
 
       - name: Upload Lighthouse report artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
           path: ./reports/lighthouse-report.html

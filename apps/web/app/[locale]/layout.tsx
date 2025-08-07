@@ -2,6 +2,7 @@ import { Geist } from "next/font/google";
 import "./../globals.css";
 import { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { AnimatedBackground, FloatingElements } from "@/components/ui";
 
 export const generateMetadata = async ({
   params,
@@ -46,7 +47,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.className}>
-      <body>{children}</body>
+      <body>
+        <div className="min-h-screen relative">
+          <AnimatedBackground />
+          <FloatingElements />
+          <main className="relative z-20">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
